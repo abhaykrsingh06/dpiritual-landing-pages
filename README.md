@@ -8,6 +8,7 @@ Vercel or any static host.
 | Page | Folder | Checkout |
 |------|--------|----------|
 | वशीकरण मंत्र PDF Guide (₹49) | [`vashikaran-mantra-pdf/`](vashikaran-mantra-pdf/) | https://superprofile.bio/vp/vashikaran-mantra-pdf-guide |
+| सरकारी नौकरी गाइड 2026 PDF (₹49) | [`sarkari-naukari/`](sarkari-naukari/) | **placeholder — set `CONFIG.checkoutUrl`** |
 
 ## Run locally
 
@@ -38,6 +39,15 @@ button, and confirm the checkout form appears inside the modal and that a
 test UPI/card payment completes. If the modal stays blank, switch to
 `redirect`. You can also test either mode without editing the file by
 appending `?checkout=redirect` or `?checkout=embed` to the page URL.
+
+## Sarkari Naukri page: before sending MGID traffic
+
+1. Create the product on SuperProfile and paste its link into `CONFIG.checkoutUrl` in `sarkari-naukari/index.html`.
+2. Make the "what's inside" chapters and the two bonuses match what the PDF actually contains.
+3. Replace the three sample testimonials with real buyer reviews (or remove that section).
+4. Paste the MGID Sensor script into `<head>` and create a goal named `begin_checkout`; the buy buttons fire it.
+5. MGID / UTM params on the landing URL (`utm_*`, `click_id`, `clickid`, `mgid`) are forwarded to the checkout link automatically.
+6. The countdown counts to midnight IST and resets daily (`CONFIG.offerEndHour`).
 
 ## Analytics
 
